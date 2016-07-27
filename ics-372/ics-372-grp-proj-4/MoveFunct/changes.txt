@@ -1,0 +1,27 @@
+Changes:
+
+MoveButton class created
+
+Controller:
+	added unselectItems()
+		-unselects all currently selected items
+	added public void moveItems(Point endPoint)
+		-moves selected items to a given point, relative to the starting click position.
+		
+View:
+	added private JButton moveButton
+		added it properly to the panel lines 178 and 185
+		
+Item:
+	added method :   public abstract void move(Point startPoint, Point endPoint);
+		- Works by moving the points stored in the item the distance between the start and the end point.
+		- Also added to each of the subclass items (oval, label, line)
+		- I couldn't find any similar methods if this is the right spot to put the move method.
+		- Polygon, when we get it implemented, will need this added
+			(as a guess by iterating through each point and adding the offset), I already added it to oval.
+		
+Label:
+	added method : public void setStartingPoint(Point point);
+		-needed for my implementation of move() to change the label's point.
+		
+I probably forgot a few other changes that I did, sorry if it complicates things.

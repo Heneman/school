@@ -1,0 +1,1 @@
+The oval is selected if the chosen point falls within its bounding box.
